@@ -1,0 +1,16 @@
+﻿@using OnlineShop.Domain.Entities
+@using OnlineShop.WebUI.Models
+@model ProductListPageInfoToView
+
+
+@{
+    ViewBag.Title = "Products";
+}
+
+@foreach (Product p in Model.Products)
+{
+    Html.RenderPartial("Product", p);
+}
+<div class="pager">
+    @Html.PageLink(Model.PageInfo,x=>Url.Action("List", new {Page=x,Category=Model.Category}))
+</div>

@@ -1,0 +1,139 @@
+﻿body {
+    
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+#header div.title, div.item h3, div.item h4, .pager a {
+    font: bold 1em "Arial Narrow", "Franklin Gothic Medium", Arial;
+}
+
+#header {
+    background: #0094ff;
+    border-bottom: 2px solid #111;
+    color: white;
+}
+
+#header div.title {
+        font-size: 2em;
+        padding: 6em;
+    }
+
+#content {
+    border-left: 2px solid grey;
+    margin-left: 9em;
+    padding: 1em;
+}
+
+#categories {
+    float: left;
+    width: 8em;
+    padding: 0.3em;
+}
+
+#item {
+    border-top: 1px dotted grey;
+    padding-top: 0.7em;
+    margin-bottom: 0.7em;
+}
+
+#item:first-child {
+        border-top: none;
+        padding-top: 0;
+    }
+
+#item h3 {
+        font-size: 1.3em;
+        margin: 0 0 0.025em 0;
+    }
+
+#item h4 {
+        font-size: 1.1em;
+        margin: 0.4em 0 0 0;
+    }
+
+#pager {
+    text-align: right;
+    border-top: 2px solid silver;
+    padding: 5em 0 0 0;
+    margin-top: 1em;
+}
+
+#pager a {
+    font-size: 1.1em;
+    color: #666;
+    text-decoration: none;
+    padding: 0 0.4em 0 0.4em;
+}
+
+#pager a:hover {
+        background-color: silver;
+    }
+
+#pager a.selected {
+        background-color: #353535;
+        color: white;
+    }
+
+#categories a {
+    font: bold 1.1em "Arial Narrow", "Franklin Gothic Medium", Arial;
+    display: block;
+    text-decoration: none;
+    padding: 0.6em;
+    color: black;
+    border-bottom: 1px solid silver;
+}
+
+#categories a.selected {
+        background-color: #666;
+        color: white;
+    }
+
+#categories a:hover {
+        background-color: #ccc;
+        color: white;
+    }
+
+#categories a.selected:hover {
+        background-color: #666;
+    }
+
+    form{margin:0; padding:0}
+    div.item form{float: right;}
+    div.item input{
+        color:white; background-color:#333;
+        border:1px solid black;
+        cursor:pointer;
+    }
+  
+    h2{
+        margin-top:0.3em;
+    }
+    tfoot td{
+        border-top:1px dotted gray;
+        font-weight:bold;
+    }
+    .actionButtons, input.actionButtons{
+        font:8em Arial;
+        color:white;
+        margin:0.5em;
+        padding:0.15em 0.2em 1.5em;
+        border:1px black solid;
+        width:12%
+    }
+    .actionButtons a{
+        text-decoration:none;
+    }
+

@@ -1,0 +1,47 @@
+﻿@model OnlineShop.WebUI.Models.CartIndexViewModel
+@{
+    ViewBag.Title = "Show Your Cart";
+}
+
+@{
+    ViewBag.Title = "OnleShop: Your Cart";
+}
+
+<h2>Your Cart</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Quantity</th>
+            <th>Product</th>
+            <th class="text-right">Price</th>
+            <th class="text-right">Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var line in Model.Cart.Lines)
+        {
+            <tr>
+                <td class="text-center">@line.Quantity</td>
+                <td class="text-left">@line.Product.Name</td>
+                <td class="text-right">@line.Product.Price.ToString("c")</td>
+                <td class="text-right">
+                    @((line.Quantity * line.Product.Price).ToString("c"))
+                </td>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3" class="text-right">Count:</td>
+            <td class="text-right">
+                @Model.Cart.TotalCoast().ToString("c")
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="text-center">
+    <a class="btn btn-primary" href="@Model.ReturnURL">Continue Shopping</a>
+    @Html.ActionLink("Check Now","Checkout")
+</div>
+
