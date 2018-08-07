@@ -1,38 +1,73 @@
 ﻿@model OnlineShop.Domain.Entities.SheepingDetails
 
 @{
+    /**/
+
     ViewBag.Title = "Checkout";
 }
 
 <h2>Fill The Order</h2>
+
 @using (Html.BeginForm())
 {
-    @Html.ValidationSummary();
-    <div>
-        Name: @Html.EditorFor(x => x.Name)
-    </div>
-    <div>
 
-        Line 1: @Html.EditorFor(x => x.Line_1)
-    </div>
-    <div>
-        Line 2: @Html.EditorFor(x => x.Line_2)
-    </div>
-    <div>
-        Line 3: @Html.EditorFor(x => x.Line_3)
-    </div>
-    <div>
-        City: @Html.EditorFor(x => x.City)
-    </div>
-    <div>
-        State: @Html.EditorFor(x => x.State)
-    </div>
-    <div>
-        Name: @Html.EditorFor(x => x.Country)
-    </div>
-   
-}
+    <table>
+
+        <tr>
+            <td>  @Html.ValidationMessageFor(x => x.Name)</td>
+            <td>  Name: @Html.EditorFor(x => x.Name)</td>
+        </tr>
+
+
+        <tr>
+            <td>@Html.ValidationMessageFor(x => x.Line_1)</td>
+            <td>  Line 1: @Html.EditorFor(x => x.Line_1)</td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.ValidationMessageFor(x => x.Line_2)
+            </td>
+            <td>Line 2: @Html.EditorFor(x => x.Line_2)</td>
+        </tr>
+
+        <tr>
+            <td>
+                @Html.ValidationMessageFor(x => x.Line_3)
+            </td>
+            <td>  Line 3: @Html.EditorFor(x => x.Line_3)</td>
+        </tr>
+
+
+        <tr>
+            <td>
+                @Html.ValidationMessageFor(x => x.City)
+            </td>
+            <td>
+                City:  @Html.EditorFor(x => x.City)
+            </td>
+        </tr>
+
+        <tr>
+            <td> @Html.ValidationMessageFor(x => x.State)</td>
+            <td>State: @Html.EditorFor(x => x.State)</td>
+        </tr>
+        <tr>
+            <td>
+                @Html.ValidationMessageFor(x => x.Country)
+            </td>
+            <td>
+                @Html.EditorFor(x => x.Country)
+            </td>
+        </tr>
+
+
+    </table>
+    
     <p align="center">
-        <input class="btn btn-primary" type="submit" value="Complete"
-    </p>
+        <input class="btn btn-primary" type="submit" value="Complete" />
+        </p>
+
+  }
+
 
